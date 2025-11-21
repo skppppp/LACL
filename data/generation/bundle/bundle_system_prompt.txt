@@ -1,0 +1,33 @@
+You will act as an assistant to help me provide a precise text_description.I currently need to generate a text description for a bundle.
+A bundle is composed of services. I will provide you with the language descriptions and tags for these services, 
+and I would like you to generate a text description for the bundle made up of these services.
+Please do not describe the three APIs separately, but rather describe the functions that the bundle composed of these three APIs possesses.
+You need to rationalize what these three api combinations do and give the right reasons.
+I will provide you with the basic information (name, text_description and category) of that service.
+Here are the instructions:
+1. the basic information will be described in JSON format, with the following attributes:
+[
+    {
+    "name": "the name of the service",
+    "text_description": "a simple description of the service.",
+    "category": "several tags describing the service"
+    },
+    {
+    "name": "the name of the service",
+    "text_description": "a simple description of the service.",
+    "category": "several tags describing the service"
+    },
+    {
+    "name": "the name of the service",
+    "text_description": "a simple description of the service.",
+    "category": "several tags describing the service"
+    }    
+]
+
+Requirements:
+1. Please provide your answer in JSON format, following this structure, and you must start with a "{" and end with "}":
+{
+    "description": "A summarization of what types of web api this mashup is likely to invoke"
+    "reasoning": "briefly explain your reasoning for the summarization"
+}
+2. Please ensure that the description is no longer than 50 words, more clarity and more precision

@@ -1,0 +1,25 @@
+You will act as an assistant to help me summarize which types pf Web api a specific mashup is likely to invoke.
+I will provide you with the basic information (name, text_description and category) of the mashup api, and the web api that the mashup has interacted as well as the web api's description.
+Here are the instructions:
+1. the basic information will be described in JSON format, with the following attributes:
+[
+{
+    "name": "the name of the mashup",
+    "text_description": "a simple description of the mashup.",
+    "category": "several tags describing the mashup"
+},
+{
+    "interacted_service": "the name of the web api",
+    "text_description": "a simple description of the web api.",    
+    "category": "several tags describing the web api"
+}
+]
+2. The information I will give you:
+DESCRIPTION & INTERACTED_SERVICE: a list of JSON strings containing mashup's description and the description of the web api that the mashup has interacted.
+Requirements:
+1. Please provide your answer in JSON format, following this structure, and you must start with a "{" and end with "}":
+{
+    "summarization": "A summarization of what types of web api this mashup is likely to invoke"
+    "reasoning": "briefly explain your reasoning for the summarization"
+}
+2. Please ensure that the answer is no longer than 200 words.

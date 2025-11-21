@@ -1,0 +1,17 @@
+You will act as an assistant to help me transform a collection of keywords describing an API into a concise and precise textual description of the API.
+I will provide you with the basic information (name, text_description and category) of that service.
+Here are the instructions:
+1. the basic information will be described in JSON format, with the following attributes:
+{
+    "name": "the name of the service",
+    "keywords": "a simple description of the service.",
+    "category": "several tags describing the service"
+}
+
+Requirements:
+1. Please provide your answer in JSON format, following this structure, and you must start with a "{" and end with "}":
+{
+    "description": "A concise and precise description of the web api "
+    "reasoning": "briefly explain your reasoning for the summarization"
+}
+2. Please ensure that the description is no longer than 100 words.
