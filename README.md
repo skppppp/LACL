@@ -148,7 +148,15 @@ threshold), `--tag`. Logs are written under `model/log/`.
 augmentation — how the LLM is prompted at the service / bundle / mashup levels to
 turn sparse keyword metadata into recommendation-ready semantic features — rather
 than any single model.** Our reported experiments use **GPT-4**, but in our
-tests **other large language models reach comparable results**. The pipeline is
-deliberately model-agnostic: swap the model with `--model` (e.g.
+tests **other large language models reach comparable results**.
+
+> **Note on GPT-4 availability.** The original **GPT-4** model we used for the
+> reported experiments is **no longer callable through the official OpenAI API**
+> (it has been retired in favor of successor models). This does **not** affect
+> reproducibility: because the method is about the augmentation procedure rather
+> than a specific model, any capable LLM can be used as a drop-in replacement.
+> We recommend a current successor such as `gpt-4o` by default.
+
+The pipeline is deliberately model-agnostic: swap the model with `--model` (e.g.
 `--model gpt-4o`) or point `LLMClient` at any OpenAI-compatible endpoint via the
 `OPENAI_BASE_URL` environment variable, without changing any downstream code.
